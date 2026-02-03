@@ -1,0 +1,26 @@
+{
+  "name": "glitchmaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "electron": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VonTarkin/Glitchmaker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/VonTarkin/Glitchmaker/issues"
+  },
+  "homepage": "https://github.com/VonTarkin/Glitchmaker#readme",
+  "devDependencies": {
+    "electron": "^40.1.0",
+    "vite": "^7.3.1"
+  }
+}
