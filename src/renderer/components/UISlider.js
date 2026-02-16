@@ -37,7 +37,7 @@ class UISlider extends HTMLElement {
 
     <div class="card">
       <div class="top">
-        <div class="label" id="lbl"></div>
+        <div class="label" id="label"></div>
         <div class="val"><span id="val"></span><span id="unit"></span></div>
       </div>
 
@@ -48,7 +48,7 @@ class UISlider extends HTMLElement {
 
   cache() {
     this.$rng = this.shadowRoot.getElementById("rng");
-    this.$lbl = this.shadowRoot.getElementById("lbl");
+    this.$label = this.shadowRoot.getElementById("label");
     this.$val = this.shadowRoot.getElementById("val");
     this.$unit = this.shadowRoot.getElementById("unit");
   }
@@ -78,7 +78,7 @@ class UISlider extends HTMLElement {
     this.$rng.max = max;
     this.$rng.value = value;
 
-    this.$lbl.textContent = label;
+    this.$label.textContent = label;
     this.$unit.textContent = unit;
 
     this.updateValueLabel();

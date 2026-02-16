@@ -1,10 +1,11 @@
 :host {
-  display: inline-block;
+  display: block;
+  min-width: 0;
 }
 
 .card {
   font-family: system-ui, sans-serif;
-  width: 360px;
+  width: 10rem;
   border: 1px solid #2a2a2a;
   border-radius: 10px;
   padding: 12px 12px 10px;
@@ -17,6 +18,13 @@
   align-items: baseline;
   gap: 12px;
   margin-bottom: 10px;
+}
+
+.label, .val {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .label {
@@ -32,4 +40,43 @@
 
 .range {
   width: 100%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #2a2a2a;
+  border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  background: #e6e6e6;
+  border: 2px solid #111;
+
+  margin-top: -5px; /* centrowanie na tracku */
+  transition: all 0.12s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
 }

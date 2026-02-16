@@ -1,29 +1,55 @@
 <!doctype html>
 <html lang="pl">
   <head>
+    <style>
+      .panel {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glitchmaker</title>
   </head>
   <body>
     <h1>Glitchmaker</h1>
-    <ui-slider
-      id="intensity"
-      label="Intensity"
-      min="0"
-      max="100"
-      value="50"
-      unit="%"
-    ></ui-slider>
-
-    <ui-slider
-      id="seed"
-      label="Seed"
-      min="0"
-      max="100"
-      value="50"
-      unit=""
-    ></ui-slider>
+    <ui-image-loader></ui-image-loader>
+    <div class="panel" id="params">
+      <ui-slider
+        id="displacement"
+        label="Displacement"
+        min="0"
+        max="100"
+        value="50"
+        unit="%"
+      ></ui-slider>
+      <ui-slider
+        id="rgbShift"
+        label="RGB Shift"
+        min="0"
+        max="30"
+        value="8"
+        unit="px"
+      ></ui-slider>
+      <ui-slider
+        id="scanlines"
+        label="Scanlines"
+        min="0"
+        max="100"
+        value="15"
+        unit="%"
+      ></ui-slider>
+      <ui-slider
+        id="noise"
+        label="Noise"
+        min="0"
+        max="100"
+        value="8"
+        unit="%"
+      ></ui-slider>
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>
